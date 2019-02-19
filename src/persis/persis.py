@@ -19,6 +19,7 @@ Note: This skeleton file can be safely removed if not needed!
 import argparse
 import sys
 import logging
+import pkgutil
 
 from persis import __version__
 
@@ -28,6 +29,12 @@ __license__ = "MIT"
 
 _logger = logging.getLogger(__name__)
 
+def read_data(path: str = 'data/data.txt'):
+    """Read data included with the package
+    :returns: TODO
+
+    """
+    return pkgutil.get_data('persis', path)
 
 def fib(n):
     """Fibonacci example function
