@@ -1,24 +1,24 @@
-#!/usr/bin/env python
-# -*- coding: utf-8 -*-
-"""
-    Setup file for persis.
-    Use setup.cfg to configure your project.
+import setuptools
 
-    This file was generated with PyScaffold 3.1.
-    PyScaffold helps you to put up the scaffold of your new Python project.
-    Learn more under: https://pyscaffold.org/
-"""
-import sys
+with open("README.rst", "r") as fh:
+    long_description = fh.read()
 
-from pkg_resources import require, VersionConflict
-from setuptools import setup
+setuptools.setup(
+    name="persis",
+    version="0.0.1",
+    author="Martin Skarzynski",
+    author_email="marskar@gmail.com",
+    description=".",
+    long_description=long_description,
+    long_description_content_type="text/x-rst",
+    url="https://github.com/marskar/persis",
+    packages=setuptools.find_packages('src'),
+    package_dir={"": "src"},
+    package_data={'persis': ['data/data.txt']},
+    classifiers=[
+        "Programming Language :: Python :: 3",
+        "License :: OSI Approved :: MIT License",
+        "Operating System :: OS Independent",
+    ],
+)
 
-try:
-    require('setuptools>=38.3')
-except VersionConflict:
-    print("Error: version of setuptools is too old (<38.3)!")
-    sys.exit(1)
-
-
-if __name__ == "__main__":
-    setup(use_pyscaffold=True)
