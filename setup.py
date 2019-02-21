@@ -8,7 +8,7 @@ setuptools.setup(
     version="0.0.6",
     author="Martin Skarzynski",
     author_email="marskar@gmail.com",
-    description="A minimal example of including pickled data and models.",
+    description="A minimal example of packaging pickled data and models.",
     long_description=long_description,
     long_description_content_type="text/x-rst",
     url="https://github.com/marskar/persis",
