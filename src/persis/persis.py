@@ -33,7 +33,7 @@ def get_df_pkl(path: str = 'data/df.pkl') -> bytes:
     return pkgutil.get_data('persis', path)
 
 
-def get_model_path(path: str = 'models/knn.pkl'):
+def get_model_path(path: str = 'models/knn.pkl') -> str:
     """Access a model included with the package
     Returns:
         Scikit-learn model picked with joblib
