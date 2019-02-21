@@ -17,6 +17,7 @@ Note: This skeleton file can be safely removed if not needed!
 """
 
 import pkgutil
+import pkg_resources
 
 
 __author__ = "Martin Skarzynski"
@@ -24,7 +25,7 @@ __copyright__ = "Martin Skarzynski"
 __license__ = "MIT"
 
 
-def get_df_pkl(path: str = 'data/df.pkl'):
+def get_df_pkl(path: str = 'data/df.pkl') -> bytes:
     """Access data included with the package
     Returns:
         Pickled pandas dataframe
@@ -32,10 +33,10 @@ def get_df_pkl(path: str = 'data/df.pkl'):
     return pkgutil.get_data('persis', path)
 
 
-def get_model_pkl(path: str = 'models/knn.pkl'):
+def get_model_path(path: str = 'models/knn.pkl'):
     """Access a model included with the package
     Returns:
         Scikit-learn model picked with joblib
 
     """
-    return pkgutil.get_data('persis', path)
+    return pkg_resources.resource_filename('persis', path)
