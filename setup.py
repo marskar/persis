@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="persis",
-    version="0.0.4",
+    version="0.0.5",
     author="Martin Skarzynski",
     author_email="marskar@gmail.com",
     description=".",
