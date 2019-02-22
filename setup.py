@@ -14,7 +14,7 @@ setuptools.setup(
     url="https://github.com/marskar/persis",
     packages=setuptools.find_packages('src'),
     package_dir={"": "src"},
-    package_data={'persis': ['data/*', 'models/*']},
+    package_data={'': ['data/*', 'models/*']},
     classifiers=[
         "Programming Language :: Python :: 3",
         "License :: OSI Approved :: MIT License",
