@@ -5,7 +5,7 @@ with open("README.rst", "r") as fh:
 
 setuptools.setup(
     name="persis",
-    version="0.0.7",
+    version="0.0.8",
     author="Martin Skarzynski",
     author_email="marskar@gmail.com",
     description="A minimal example of packaging pickled data and models.",
